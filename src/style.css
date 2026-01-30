@@ -7,37 +7,52 @@ body {
   background-color: #ebebeb;
   font-family: sans-serif;
 }
-.sidebar {
+.hamburger-btn {
+  background-color: #ebebeb;
   position: absolute;
   right: 50px;
   top: 20px;
   border: none;
   cursor: pointer;
 }
+.hamburger-btn:hover {
+  svg {
+    fill: black;
+  }
+}
 .close {
   cursor: pointer;
   border: none;
   background-color: white;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
-.hidden-bar {
+.close:hover {
+  svg {
+    fill: black;
+  }
+}
+.hidden-sidebar {
   background-color: white;
   width: 500px;
   height: 100vh;
-  /* transform: translate(-100%); */
-  transition: all 1s ease-in;
+  padding-top: 18px;
+  transform: translate(-100%);
+  transition: all 0.6s ease-out;
   position: fixed;
   left: 0;
   top: 0;
 }
 .show-sidebar {
-  transform: translate(100%);
+  transform: translate(1%);
+  transition: all 0.6s ease-in-out;
 }
 ul {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
   margin-top: 30px;
-  margin-left: 20px;
   list-style: none;
 }
 li {
@@ -45,7 +60,11 @@ li {
   font-size: 25px;
   font-weight: 300;
   cursor: pointer;
+  padding: 15px;
 }
-.contact:hover {
-  background: #f8a5a5;
+li:hover {
+  background-color: rgb(248, 165, 165);
+  padding-left: 20px;
+  width: 100%;
+  transition: all 0.5s ease;
 }
